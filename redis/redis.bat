@@ -20,11 +20,22 @@ echo 4 - Uninstall Redis Service
 echo 5 - EXIT
 echo.
 SET /P M=Type 1, 2, 3, 4, or 5 then press ENTER:
-IF %M%==1 GOTO INSTALL
-IF %M%==2 GOTO REDSTART
-IF %M%==3 GOTO REDSTOP
-IF %M%==4 GOTO UNINSTALL
-IF %M%==5 GOTO EOF
+IF %M%==1 (
+GOTO INSTALL
+) ELSE IF %M%==2 (
+GOTO REDSTART
+) ELSE IF %M%==3 (
+GOTO REDSTOP
+) ELSE IF %M%==4 (
+GOTO UNINSTALL
+) ELSE IF %M%==5 (
+GOTO EOF
+) ELSE (
+echo.
+echo Invalid choice.
+ping 192.0.2.2 -n 1 -w 2000 > nul
+GOTO MAIN
+)
 
 :INSTALL
 SC QUERY redis > NUL
