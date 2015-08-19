@@ -21,10 +21,10 @@ In redis folder we will find `redis.bat`, This script make easy to install servi
 Copy `php_redis.dll` and `php_igbinary.dll` to wamp installation folder. e.g `\wamp\bin\php\php5.5.12\ext\`
 
 Finally, we need load this extension to `php.ini`:
-``` 
+```
 [PHP_REDIS]
 extension=php_redis.dll
-extension=php_igbinary.dll 
+extension=php_igbinary.dll
 ```
 We can start wamp server now.
 
@@ -32,4 +32,4 @@ References
 * [Wamp Server](http://www.wampserver.com/en/)
 * [Redis on Windows](https://github.com/MSOpenTech/Redis)
 * [PECL Redis](http://pecl.php.net/package/redis)
-* [PCL Igbinary](http://pecl.php.net/package/igbinary)
+* [PECL Igbinary](http://pecl.php.net/package/igbinary)
